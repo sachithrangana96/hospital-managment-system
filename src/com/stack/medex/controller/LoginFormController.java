@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.stack.medex.db.Database;
 import com.stack.medex.dto.UserDto;
 import com.stack.medex.enums.AccountType;
+import com.stack.medex.util.Cookie;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,7 +24,7 @@ public class LoginFormController {
     public AnchorPane loginContext;
 
 
-    public void signInOnAction(ActionEvent actionEvent) {
+    public void signInOnAction(ActionEvent actionEvent) throws IOException {
         String email = txtEmail.getText();
         String password = txtPassword.getText();
         AccountType accountType= rDtnDockter.isSelected() ? AccountType.DOCKTER : AccountType.PATIENT;
@@ -35,6 +36,8 @@ public class LoginFormController {
                 if(dto.getPassword().equals(password)){
                     if(dto.getAccountType().equals(accountType)){
                         new Alert(Alert.AlertType.CONFIRMATION,"Success").show();
+                        Cookie.selectedUser = dto;
+                        setUi("DocterDashboardForm");
                         return;
                     }else{
                        /* new Alert(Alert.AlertType.WARNING,"We Can,t find Your "+accountType+"Account")  */
@@ -52,9 +55,13 @@ public class LoginFormController {
     }
 
     public void createAnAccountOnAction(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) loginContext.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/RegisterForm.fxml"))));
-        stage.centerOnScreen();
 
+        setUi("RegisterForm");
+    }
+
+    private void setUi(String location) throws IOException {
+        Stage stage = (Stage) loginContext.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/"+location+".fxml"))));
+        stage.centerOnScreen();
     }
 }

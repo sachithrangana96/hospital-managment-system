@@ -1,4 +1,4 @@
-package com.stack.medex.view;
+package com.stack.medex.controller;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;

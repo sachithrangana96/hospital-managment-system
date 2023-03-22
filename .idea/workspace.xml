@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hospital-Managment-system.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jfoenix-8.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/Appinitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/db/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/enums/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/util/Cookie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/LoginForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/RegisterForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/RegisterFormController.java" afterDir="false" />
+    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="initial state of login and register flow">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/Appinitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/Appinitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DocterDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/RegisterForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/RegisterForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,11 +96,23 @@
       <workItem from="1679319867571" duration="3032000" />
       <workItem from="1679330865395" duration="3709000" />
       <workItem from="1679368969916" duration="7065000" />
-      <workItem from="1679394949123" duration="12686000" />
+      <workItem from="1679394949123" duration="18964000" />
     </task>
+    <task id="LOCAL-00001" summary="initial state of login and register flow">
+      <created>1679416816642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679416816642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial state of login and register flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial state of login and register flow" />
   </component>
 </project>
