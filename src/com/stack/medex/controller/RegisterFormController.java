@@ -2,9 +2,13 @@ package com.stack.medex.controller;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import com.stack.medex.db.DBconnection;
 import com.stack.medex.db.Database;
-import com.stack.medex.dto.UserDto;
+import com.stack.medex.dto.User;
 import com.stack.medex.enums.AccountType;
+import com.stack.medex.util.CrudUtil;
+import com.stack.medex.util.IdGenerate;
+import com.stack.medex.util.PasswordConfig;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,6 +18,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Optional;
 
 public class RegisterFormController {
@@ -33,24 +41,58 @@ public class RegisterFormController {
             }
         }*/
 
-        Optional<UserDto> selectedUser = Database.userTable.stream().filter(e -> e.getEmail().equals(email.trim().toLowerCase()))
+        Optional<User> selectedUser = Database.userTable.stream().filter(e -> e.getEmail().equals(email.trim().toLowerCase()))
                 .findFirst();
         if(selectedUser.isPresent()){
             new Alert(Alert.AlertType.WARNING,"Email is already exist").show();
             return;
         }
 
-        Database.userTable.add(
-                new UserDto(
-                        txtFirstName.getText(),
-                        txtLastName.getText(),
-                        email.trim().toLowerCase(),
-                        txtPassword.getText(),
-                        rbtnDockter.isSelected() ? AccountType.DOCKTER : AccountType.PATIENT
-                )
+//        Database.userTable.add(
+//                new User(
+//                        txtFirstName.getText(),
+//                        txtLastName.getText(),
+//                        email.trim().toLowerCase(),
+//                        new PasswordConfig().encrypt( txtPassword.getText()),
+//                        rbtnDockter.isSelected() ? AccountType.DOCKTER : AccountType.PATIENT
+//                )
+//        );
+
+
+
+        User user = new User(
+                txtFirstName.getText(),
+                txtLastName.getText(),
+                email.trim().toLowerCase(),
+                new PasswordConfig().encrypt( txtPassword.getText()),
+                rbtnDockter.isSelected() ? AccountType.DOCTOR : AccountType.PATIENT
         );
-        new Alert(Alert.AlertType.CONFIRMATION,"Welcome").show();
-        setUi();
+
+        try {
+
+            boolean isSaved = CrudUtil.executr(
+                    "INSERT INTO user VALUES(?,?,?,?,?,?)",
+                    new IdGenerate().generatedId(),
+                    user.getFirstName(),
+                    user.getLastName(),
+                    user.getEmail(),
+                    user.getPassword(),
+                    user.getAccountType().name()
+
+            );
+
+            if (isSaved){
+                new Alert(Alert.AlertType.CONFIRMATION, "Saved!").show();
+                setUi();
+            }else {
+                new Alert(Alert.AlertType.WARNING, "Try Again!").show();
+            }
+
+
+        }catch (ClassNotFoundException | SQLException e){
+            e.printStackTrace();
+        }
+
     }
 
     public void alreadyHaveAnAcountOnAction(ActionEvent actionEvent) throws IOException {

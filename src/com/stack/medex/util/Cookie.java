@@ -1,9 +1,10 @@
 package com.stack.medex.util;
 
-import com.stack.medex.dto.UserDto;
+import com.stack.medex.db.Database;
+import com.stack.medex.dto.User;
 
 public class Cookie {
 
 
-    public  static UserDto selectedUser;
+    public  static User selectedUser= Database.userTable.get(1);
 }

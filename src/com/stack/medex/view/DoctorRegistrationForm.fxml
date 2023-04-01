@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="doctorRegistrationContext" prefHeight="678.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stack.medex.controller.DoctorRegistrationFormController">
+   <children>
+      <TextField fx:id="txtFirstName" editable="false" layoutX="63.0" layoutY="164.0" promptText="First Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtLastName" editable="false" layoutX="339.0" layoutY="164.0" promptText="Last Name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNic" layoutX="623.0" layoutY="164.0" promptText="Nic">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtContact" layoutX="63.0" layoutY="245.0" promptText="Contact">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEmail" editable="false" layoutX="353.0" layoutY="245.0" promptText="Email">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <JFXRadioButton fx:id="rbtnMale" layoutX="392.0" layoutY="356.0" selected="true" text="Male">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="549.0" layoutY="356.0" text="FeMale" toggleGroup="$gender">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXRadioButton>
+      <TextField fx:id="txtSpecillization" layoutX="63.0" layoutY="346.0" promptText="Specilization">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <JFXTextArea fx:id="txtAddress" layoutX="63.0" layoutY="414.0" prefHeight="188.0" prefWidth="832.0" promptText="Address">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXTextArea>
+      <Button fx:id="btnSubmit" layoutX="914.0" layoutY="619.0" mnemonicParsing="false" onAction="#submitDataOnAction" style="-fx-background-color: skyblue;" text="Submit Data">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
