@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.stack.medex.controller.NewAppointmentFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="newAppointmentContext" prefHeight="628.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stack.medex.controller.NewAppointmentFormController">
+   <children>
+      <Separator layoutX="14.0" layoutY="119.0" prefHeight="4.0" prefWidth="1067.0" />
+      <Label layoutX="33.0" layoutY="49.0" text="Make an Appointment">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="915.0" layoutY="57.0" onAction="#backToHomeOnAction" text="Back to Home" />
+      <JFXComboBox fx:id="cmbDockter" layoutX="63.0" layoutY="155.0" prefHeight="31.0" prefWidth="240.0" promptText="Docter Name" />
+      <JFXDatePicker fx:id="txtDate" layoutX="339.0" layoutY="155.0" prefHeight="31.0" prefWidth="257.0" promptText="Date" />
+      <JFXTimePicker fx:id="txtTime" layoutX="629.0" layoutY="155.0" promptText="Time" />
+      <JFXButton layoutX="883.0" layoutY="155.0" onAction="#seeAvailabilityOnAction" text="See Availability" />
+      <JFXTextField fx:id="txtAmount" editable="false" layoutX="63.0" layoutY="236.0" prefHeight="31.0" prefWidth="240.0" promptText="Amount" />
+      <JFXTextArea fx:id="txtMessage" layoutX="63.0" layoutY="300.0" prefHeight="229.0" prefWidth="937.0" promptText="Extra Message" />
+      <JFXButton layoutX="866.0" layoutY="554.0" onAction="#submitDateOnAction" prefHeight="31.0" prefWidth="127.0" text="Submit" />
+   </children>
 </AnchorPane>

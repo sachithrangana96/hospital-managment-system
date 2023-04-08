@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="connect jdbc and auth flow">
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientRegistrationFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/PatientRegisterForm.fxml" afterDir="false" />
+    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="docter and patient registration">
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/tm/DoctorComboView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/DoctorRegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DoctorRegistrationFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/Cookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/CrudUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/CrudUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/NewAppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/NewAppointmentFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/NewAppointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/NewAppointmentForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,7 @@
       <workItem from="1680262850056" duration="8726000" />
       <workItem from="1680346401582" duration="6551000" />
       <workItem from="1680834979063" duration="21735000" />
-      <workItem from="1680921392096" duration="467000" />
+      <workItem from="1680921392096" duration="9855000" />
     </task>
     <task id="LOCAL-00001" summary="initial state of login and register flow">
       <created>1679416816642</created>
@@ -145,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680377437373</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="docter and patient registration">
+      <created>1680921992802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680921992802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +169,7 @@
     <MESSAGE value="initial state of login and register flow" />
     <MESSAGE value="modify cntriller" />
     <MESSAGE value="connect jdbc and auth flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect jdbc and auth flow" />
+    <MESSAGE value="docter and patient registration" />
+    <option name="LAST_COMMIT_MESSAGE" value="docter and patient registration" />
   </component>
 </project>
