@@ -38,17 +38,35 @@ public class LoginFormController {
         try {
 
 
-            ResultSet resultSet = CrudUtil.executr("SELECT * FROM user WHERE email=? AND account_type=?",email,accountType.name());
+            ResultSet resultSet = CrudUtil.execute("SELECT * FROM user WHERE email=? AND account_type=?",email,accountType.name());
 
 
             if (resultSet.next()){
+                Cookie.selectedUser = new User(
+                        resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getString("email"),
+                        "",
+                        accountType
+                );
                if (new PasswordConfig().decrypt(password,resultSet.getString("password"))){
-                    if(accountType.equals(AccountType.DOCTOR)){
-                        setUi("DocterDashboardForm");
-                        return;
+                    if(accountType.equals(AccountType.PATIENT)){
+
+                        ResultSet selectedPatientResult = CrudUtil.execute("SELECT patient_id FROM patient WHERE email=?", email);
+                        if(selectedPatientResult.next()){
+                            setUi("PatientDashboardForm");
+                        }else{
+                            setUi("PatientRegisterForm");
+                        }
+//                        setUi("DocterDashboardForm");
+
                     }else {
-                        setUi("PatientDashboardForm");
-                        return;
+                        ResultSet selectedDoctorResult = CrudUtil.execute("SELECT doctor_id FROM doctor WHERE email=?", email);
+                        if(selectedDoctorResult.next()){
+                            setUi("DocterDashboardForm");
+                        }else{
+                            setUi("DoctorRegistrationForm");
+                        }
                     }
                }
             }else {

@@ -4,34 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="modify cntriller">
-      <change afterPath="$PROJECT_DIR$/lib/driver/mysql-connector-java-8.0.30.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/security/jbcrypt-0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DoctorRegistrationFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientDashboardFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientManagementFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/db/DBconnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/dto/DocktorDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/dto/PatientDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/enums/GenderType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/util/CrudUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/util/PasswordConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DoctorRegistrationForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/PatientDashboardForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/PatientManagementForm.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/tm/PatientTm.java" afterDir="false" />
+    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="connect jdbc and auth flow">
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientRegistrationFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/PatientRegisterForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hospital-Managment-system.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Hospital-Managment-system.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/Appinitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/Appinitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/DocterDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DocterDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/DoctorRegistrationFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DoctorRegistrationFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/db/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/db/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/enums/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/enums/AccountType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/Cookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/CrudUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/CrudUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +48,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/java A to Z/Hospital-Managment-system/lib/security/jbcrypt-0.2.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/java A to Z/Hospital-Managment-system/src/com/stack/medex/view&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,6 +67,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\java A to Z\Hospital-Managment-system\src\com\stack\medex\view" />
       <recent name="E:\java A to Z\Hospital-Managment-system\lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -137,7 +120,9 @@
       <workItem from="1680073480550" duration="14509000" />
       <workItem from="1680200543037" duration="3051000" />
       <workItem from="1680262850056" duration="8726000" />
-      <workItem from="1680346401582" duration="5870000" />
+      <workItem from="1680346401582" duration="6551000" />
+      <workItem from="1680834979063" duration="21735000" />
+      <workItem from="1680921392096" duration="467000" />
     </task>
     <task id="LOCAL-00001" summary="initial state of login and register flow">
       <created>1679416816642</created>
@@ -153,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679485894565</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="connect jdbc and auth flow">
+      <created>1680377437373</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680377437373</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +165,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial state of login and register flow" />
     <MESSAGE value="modify cntriller" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify cntriller" />
+    <MESSAGE value="connect jdbc and auth flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect jdbc and auth flow" />
   </component>
 </project>

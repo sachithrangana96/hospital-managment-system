@@ -6,5 +6,5 @@ import com.stack.medex.dto.User;
 public class Cookie {
 
 
-    public  static User selectedUser= Database.userTable.get(1);
+    public  static User selectedUser;
 }

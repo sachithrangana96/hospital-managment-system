@@ -70,7 +70,7 @@ public class RegisterFormController {
 
         try {
 
-            boolean isSaved = CrudUtil.executr(
+            boolean isSaved = CrudUtil.execute(
                     "INSERT INTO user VALUES(?,?,?,?,?,?)",
                     new IdGenerate().generatedId(),
                     user.getFirstName(),
