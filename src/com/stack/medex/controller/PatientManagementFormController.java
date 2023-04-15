@@ -2,16 +2,24 @@ package com.stack.medex.controller;
 
 import com.stack.medex.db.Database;
 import com.stack.medex.dto.PatientDto;
+import com.stack.medex.enums.GenderType;
+import com.stack.medex.util.CrudUtil;
 import com.stack.medex.view.tm.PatientTm;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 
 public class PatientManagementFormController {
@@ -47,32 +55,40 @@ public class PatientManagementFormController {
     }
 
     private void loadAllData(String s) {
-        s=s.toLowerCase(); //immutable
+//        s=s.toLowerCase(); //immutable
+        String searchText="%"+s+"%";
         ObservableList<PatientTm> tmList = FXCollections.observableArrayList();
 
-        for(PatientDto dto: Database.patientTable){
-            if(
-                    dto.getFirstName().contains(s) ||
-                    dto.getLastName().contains(s) ||
-                    dto.getEmail().contains(s)
-            ){
-                tmList.add(
-                        new PatientTm(
-                                dto.getNic(),
-                                dto.getFirstName(),
-                                dto.getLastName(),
-                                new SimpleDateFormat("yyyy-MM-dd").format(dto.getDob()),
-                                dto.getGenderType(),
-                                dto.getAddress(),
-                                10,
-                                dto.getEmail()
-                        )
-                );
+        try {
+            ResultSet set = CrudUtil.execute("SELECT * FROM patient WHERE email LIKE ? OR first_name LIKE ? OR last_name LIKE ?",
+                    searchText,searchText,searchText);
+            while (set.next()){
+                tmList.add(new PatientTm(
+                        set.getString(6),
+                        set.getString(2),
+                        set.getString(3),
+                        new SimpleDateFormat("yyyy-MM-dd")
+                                .format(set.getDate(8)),
+                        set.getString(9)=="MALE"? GenderType.MALE:GenderType.FEMALE,
+                        set.getString(7),
+                        0,
+                        set.getString(4)
+                ));
             }
+            tblPatient.setItems(tmList);
+
+        }catch (SQLException | ClassNotFoundException e){
+            e.printStackTrace();
         }
-        tblPatient.setItems(tmList);
     }
 
-    public void backToHomeOnAction(ActionEvent actionEvent) {
+    public void backToHomeOnAction(ActionEvent actionEvent) throws IOException {
+        setUi("DocterDashboardForm");
+    }
+
+    private void setUi(String location) throws IOException {
+        Stage stage = (Stage) patientContext.getScene().getWindow();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/"+location+".fxml"))));
+        stage.centerOnScreen();
     }
 }

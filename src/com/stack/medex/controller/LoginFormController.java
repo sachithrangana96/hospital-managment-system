@@ -55,6 +55,7 @@ public class LoginFormController {
                         ResultSet selectedPatientResult = CrudUtil.execute("SELECT patient_id FROM patient WHERE email=?", email);
                         if(selectedPatientResult.next()){
                             setUi("PatientDashboardForm");
+
                         }else{
                             setUi("PatientRegisterForm");
                         }

@@ -35,5 +35,10 @@
             <Font size="21.0" />
          </font>
       </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="402.0" layoutY="175.0" onAction="#navigateToAppointmentManagentPage" prefHeight="31.0" prefWidth="211.0" style="-fx-background-color: skyblue;" text="Appointments">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

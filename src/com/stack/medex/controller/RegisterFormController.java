@@ -69,10 +69,10 @@ public class RegisterFormController {
         );
 
         try {
-
+            String id = new IdGenerate().generateId("SELECT user_id FROM user ORDER BY user_id DESC 1","U");
             boolean isSaved = CrudUtil.execute(
                     "INSERT INTO user VALUES(?,?,?,?,?,?)",
-                    new IdGenerate().generatedId(),
+                    id,
                     user.getFirstName(),
                     user.getLastName(),
                     user.getEmail(),

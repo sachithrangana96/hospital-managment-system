@@ -75,13 +75,21 @@ public class DocterDashboardFormController {
         }
     }
 
+
+
+    public void navigateToPatientManagentPage(ActionEvent actionEvent) throws IOException {
+        setUi("PatientManagementForm");
+    }
+
+    public void navigateToAppointmentManagentPage(ActionEvent actionEvent) throws IOException {
+        setUi("AppointmentsForm");
+    }
+
     private void setUi(String location) throws IOException {
         Stage stage = (Stage) docterDashboardContext.getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../view/"+location+".fxml"))));
         stage.centerOnScreen();
     }
 
-    public void navigateToPatientManagentPage(ActionEvent actionEvent) throws IOException {
-        setUi("PatientManagementForm");
-    }
+
 }

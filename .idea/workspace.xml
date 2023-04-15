@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="docter and patient registration">
-      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/tm/DoctorComboView.java" afterDir="false" />
+    <list default="true" id="fcce0f01-26b8-4ee0-8906-bb07303c507d" name="Changes" comment="new appoinment ui create">
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/AppointmentsFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/AppointmentsForm.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/stack/medex/view/tm/AllAppointmentTm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/DocterDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/DocterDashboardFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/LoginFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/NewAppointmentFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/NewAppointmentFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientDashboardFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientDashboardFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/NewAppointmentForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/NewAppointmentForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientManagementFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/PatientManagementFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/controller/RegisterFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/DocterDashboardForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/stack/medex/view/PatientManagementForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/stack/medex/view/PatientManagementForm.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +69,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.stack.medex.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\java A to Z\Hospital-Managment-system\src\com\stack\medex\view" />
       <recent name="E:\java A to Z\Hospital-Managment-system\lib" />
@@ -118,7 +128,13 @@
       <workItem from="1680262850056" duration="8726000" />
       <workItem from="1680346401582" duration="6551000" />
       <workItem from="1680834979063" duration="21735000" />
-      <workItem from="1680921392096" duration="9855000" />
+      <workItem from="1680921392096" duration="10031000" />
+      <workItem from="1681017119926" duration="9454000" />
+      <workItem from="1681184778537" duration="108000" />
+      <workItem from="1681206170933" duration="3201000" />
+      <workItem from="1681296260631" duration="6846000" />
+      <workItem from="1681359115152" duration="8259000" />
+      <workItem from="1681404093628" duration="5219000" />
     </task>
     <task id="LOCAL-00001" summary="initial state of login and register flow">
       <created>1679416816642</created>
@@ -148,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680921992802</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="new appoinment ui create">
+      <created>1680947079116</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680947079116</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +193,18 @@
     <MESSAGE value="modify cntriller" />
     <MESSAGE value="connect jdbc and auth flow" />
     <MESSAGE value="docter and patient registration" />
-    <option name="LAST_COMMIT_MESSAGE" value="docter and patient registration" />
+    <MESSAGE value="new appoinment ui create" />
+    <option name="LAST_COMMIT_MESSAGE" value="new appoinment ui create" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/stack/medex/util/IdGenerate.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

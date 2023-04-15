@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="patientContext" prefHeight="692.0" prefWidth="1219.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stack.medex.controller.PatientManagementFormController">
+<AnchorPane fx:id="patientContext" prefHeight="656.0" prefWidth="1186.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stack.medex.controller.PatientManagementFormController">
    <children>
       <Label layoutX="105.0" layoutY="41.0" text="Patient Managment">
          <font>
@@ -37,9 +37,6 @@
             <TableColumn fx:id="colAddress" prefWidth="113.0" text="Address" />
             <TableColumn fx:id="colAge" minWidth="0.0" prefWidth="163.0" text="Age" />
             <TableColumn fx:id="colEmail" prefWidth="186.0" text="Email" />
-            <TableColumn prefWidth="266.0" text="Age" />
-            <TableColumn prefWidth="160.0" text="Age" />
-            <TableColumn prefWidth="160.0" text="Age" />
         </columns>
       </TableView>
    </children>
